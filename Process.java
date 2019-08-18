@@ -10,6 +10,8 @@ public class Process
     private int execSize; 
     private int turnAroundTime = 0;
     private int waitingTime = 0;
+    
+    private int burstTime; 
 
     /**
      * Constructor for objects of class Process
@@ -19,11 +21,27 @@ public class Process
         processID = ID;
         arrivalTime = arriveTime; 
         execSize = executionSize;
+        burstTime = executionSize; 
+    }
+    
+    public void changeBurstTime(int time)
+    {
+        burstTime -= time; 
+    }
+    
+    public int getBurstTime()
+    {
+        return burstTime; 
     }
     
     public int getID()
     {
         return processID; 
+    }
+    
+    public int getArrivalTime()
+    {
+        return arrivalTime; 
     }
     
     public int getExecSize()

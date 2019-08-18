@@ -69,7 +69,7 @@
                     }
                     line = br.readLine();
                 }
-           } catch (IOException e)
+            } catch (IOException e)
             {
                 e.printStackTrace();    // prints exception details
             } finally 
@@ -84,19 +84,22 @@
                 }
             }
            
-           double [] summaryTimes = new double[8];
-           int counter = 0; 
-           String result; 
-           
-           FCFS alogrithmOne = new FCFS(jobslist, DISP); 
-           result = alogrithmOne.Run();
-           summaryTimes[counter] = alogrithmOne.getAvgTAT();
-           counter++;
-           summaryTimes[counter] = alogrithmOne.getAvgWT();
-           counter++; 
-           
-           result += summaryTimes[0] + " " + summaryTimes[1];
-           System.out.println(result);
+               double [] summaryTimes = new double[8];
+               int counter = 0; 
+               String result; 
+               
+               FCFS alogrithmOne = new FCFS(jobslist, DISP); 
+               result = alogrithmOne.Run();
+               summaryTimes[counter] = alogrithmOne.getAvgTAT();
+               counter++;
+               summaryTimes[counter] = alogrithmOne.getAvgWT();
+               counter++; 
+               
+               RR alogrithmTwo = new RR(jobslist, DISP);
+               alogrithmTwo.Run();
+               
+               result += summaryTimes[0] + " " + summaryTimes[1];
+               System.out.println(result);
            
     }
 }
