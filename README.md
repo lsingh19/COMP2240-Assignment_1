@@ -1,4 +1,4 @@
-# OS-Assignment_1
+# Comp2240 - Assignment_1
 **_Mark_**: 99 /100
 
 ## Comments by Marker
